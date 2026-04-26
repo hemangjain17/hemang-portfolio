@@ -14,10 +14,10 @@ const achievements = [
 
 export default function Achievements() {
   return (
-    <section id="achievements" className="py-28 px-6 overflow-hidden bg-background">
-      <div className="max-w-7xl mx-auto mb-16">
-        <h2 className="text-4xl md:text-6xl font-bold mb-4">Milestones & <span className="text-gradient">Achievements</span></h2>
-        <p className="text-white/40 text-lg">Recognitions for technical excellence and impact.</p>
+    <section id="achievements" className="py-28 px-8 md:px-12 overflow-hidden bg-background">
+      <div className="max-w-7xl mx-auto mb-16 text-center">
+        <h2 className="text-3xl md:text-5xl font-bold mb-4">Milestones & <span className="text-gradient">Achievements</span></h2>
+        <p className="text-white/40 text-base">Recognitions for technical excellence and impact.</p>
       </div>
 
       {/* Horizontal Ticker */}

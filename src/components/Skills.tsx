@@ -34,13 +34,13 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-28 px-6 relative overflow-hidden">
+    <section id="skills" className="py-28 px-8 md:px-12 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 blur-[120px] -z-10" />
       
       <div className="max-w-7xl mx-auto">
-        <div className="mb-20">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6"><span className="text-gradient">Technical</span> Arsenal</h2>
-          <p className="text-white/40 max-w-4xl text-lg">A comprehensive overview of the technologies and tools I use to build scalable AI and web solutions.</p>
+        <div className="mb-20 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4"><span className="text-gradient">Technical</span> Arsenal</h2>
+          <p className="text-white/40 max-w-4xl mx-auto text-base">A comprehensive overview of the technologies and tools I use to build scalable AI and web solutions.</p>
         </div>
 
         <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-8 md:gap-12">
