@@ -64,7 +64,7 @@ const projects = [
     link: "https://github.com/DeveloperAkansh26/AWS-ImpactX-IITB-OpenSeeWe",
     github: "https://github.com/DeveloperAkansh26/AWS-ImpactX-IITB-OpenSeeWe",
     youtube: "https://www.youtube.com/watch?v=xfSzAvPHYDs",
-    image: "/projects/truthlens.png"
+    image: "/projects/watcher.png"
   }
 ];
 
