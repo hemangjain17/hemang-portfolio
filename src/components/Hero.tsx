@@ -41,7 +41,7 @@ export default function Hero() {
             <span>Open for collaboration</span>
           </motion.div>
           
-          <h1 className="text-4xl md:text-8xl font-black tracking-tight mb-8 leading-[1.1] min-h-[1.1em]">
+          <h1 className="text-4xl md:text-8xl font-black tracking-tight mb-8 leading-[1.1] min-h-[4.4em] md:min-h-[3.3em]">
             {text}
             <span className="animate-pulse text-primary">|</span>
           </h1>
@@ -53,23 +53,23 @@ export default function Hero() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center sm:items-center w-full">
             <motion.a
               whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(99,102,241,0.4)" }}
               whileTap={{ scale: 0.98 }}
               href="#projects"
-              className="group relative px-10 py-5 rounded-2xl bg-primary text-white font-bold flex items-center gap-3 transition-all overflow-hidden"
+              className="group relative px-6 py-3 md:px-10 md:py-5 rounded-xl md:rounded-2xl bg-primary text-white font-bold flex items-center justify-center gap-2 md:gap-3 transition-all overflow-hidden w-full sm:w-auto text-sm md:text-base"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-              Explore Projects <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              Explore Projects <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
             </motion.a>
             
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 md:gap-6">
                <motion.a
                  whileHover={{ y: -5, scale: 1.1 }}
                  href="https://github.com/hemangjain17"
                  target="_blank"
-                 className="w-12 h-12 p-2 rounded-xl bg-white/[0.03] border border-white/5 hover:border-primary/50 transition-all flex items-center justify-center"
+                 className="w-10 h-10 md:w-12 md:h-12 p-2 rounded-xl bg-white/[0.03] border border-white/5 hover:border-primary/50 transition-all flex items-center justify-center"
                >
                  <img src="/github.png" alt="Github" className="w-full h-full object-contain filter invert" />
                </motion.a>
@@ -77,7 +77,7 @@ export default function Hero() {
                  whileHover={{ y: -5, scale: 1.1 }}
                  href="https://www.linkedin.com/in/jain-hemang/"
                  target="_blank"
-                 className="w-12 h-12 p-2 rounded-xl bg-white/[0.03] border border-white/5 hover:border-primary/50 transition-all flex items-center justify-center"
+                 className="w-10 h-10 md:w-12 md:h-12 p-2 rounded-xl bg-white/[0.03] border border-white/5 hover:border-primary/50 transition-all flex items-center justify-center"
                >
                  <img src="/linkedin.png" alt="LinkedIn" className="w-full h-full object-contain" />
                </motion.a>

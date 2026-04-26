@@ -34,7 +34,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-28 px-8 md:px-12 relative overflow-hidden">
+    <section id="skills" className="py-28 px-6 md:px-12 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 blur-[120px] -z-10" />
       
       <div className="max-w-7xl mx-auto">
@@ -43,7 +43,7 @@ export default function Skills() {
           <p className="text-white/40 max-w-4xl mx-auto text-base">A comprehensive overview of the technologies and tools I use to build scalable AI and web solutions.</p>
         </div>
 
-        <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-8 md:gap-12">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 sm:gap-8 md:gap-12">
           {skills.map((skill, i) => (
             <motion.div
               key={i}
@@ -54,7 +54,7 @@ export default function Skills() {
               whileHover={{ y: -10, transition: { duration: 0.2 } }}
               className="group relative flex flex-col items-center justify-center gap-4"
             >
-              <div className="relative w-16 h-16 md:w-20 md:h-20 flex items-center justify-center glass rounded-2xl border border-white/5 group-hover:border-primary/50 transition-all duration-500 overflow-hidden">
+              <div className="relative w-12 h-12 md:w-20 md:h-20 flex items-center justify-center glass rounded-2xl border border-white/5 group-hover:border-primary/50 transition-all duration-500 overflow-hidden">
                 <div 
                   className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
                   style={skill.color ? { background: `linear-gradient(to bottom right, ${skill.color}20, transparent)` } : {}}
@@ -63,7 +63,7 @@ export default function Skills() {
                 <motion.img 
                   src={`https://cdn.simpleicons.org/${skill.slug}`} 
                   alt={skill.name}
-                  className="w-8 h-8 md:w-10 md:h-10 opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                  className="w-6 h-6 md:w-10 md:h-10 opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
                   style={skill.color ? { 
                     filter: `drop-shadow(0 0 8px ${skill.color}50)`,
                   } : {}}

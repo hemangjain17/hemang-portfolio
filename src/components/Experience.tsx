@@ -72,6 +72,7 @@ export default function Experience() {
 }
 
 function ExperienceItem({ exp, index, scrollYProgress }: { exp: any, index: number, scrollYProgress: any }) {
+  const [expanded, setExpanded] = React.useState(false);
   const step = 1 / experiences.length;
   const start = index * step;
   const end = (index + 1) * step;
@@ -108,9 +109,17 @@ function ExperienceItem({ exp, index, scrollYProgress }: { exp: any, index: numb
         </span>
       </div>
       
-      <p className="text-white/60 text-base md:text-lg leading-relaxed mb-4">
-        {exp.desc}
-      </p>
+      <div className="relative">
+        <p className={`text-white/60 text-base md:text-lg leading-relaxed mb-4 ${expanded ? '' : 'line-clamp-3 md:line-clamp-none'}`}>
+          {exp.desc}
+        </p>
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className="md:hidden text-primary font-bold hover:underline focus:outline-none text-sm"
+        >
+          {expanded ? 'Read Less' : 'Read More'}
+        </button>
+      </div>
 
       {exp.tech && (
         <div className="flex flex-wrap gap-2 pt-2">

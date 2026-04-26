@@ -95,28 +95,28 @@ export default function Contact() {
               href="mailto:jain.hemang55@gmail.com"
               whileHover={{ scale: 1.05, y: -3 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center px-10 py-4 bg-white text-black font-bold rounded-full hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all"
+              className="inline-flex items-center px-6 py-3 md:px-10 md:py-4 bg-white text-black font-bold rounded-full hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all text-sm md:text-base"
             >
               Reach out
             </motion.a>
-            <span className="text-white/25 text-sm font-medium tracking-wide">jain.hemang55@gmail.com</span>
+            <span className="text-white/25 text-xs md:text-sm font-medium tracking-wide">jain.hemang55@gmail.com</span>
           </div>
 
-          <div className="pt-4 flex items-center justify-center gap-6">
+          <div className="pt-4 flex flex-wrap items-center justify-center gap-3 sm:gap-6">
              {[
-               { icon: <Mail className="w-5 h-5" />, href: "mailto:jain.hemang55@gmail.com", label: "Email" },
-               { icon: <img src="/github.png" className="w-5 h-5 filter invert" />, href: "https://github.com/hemangjain17", label: "GitHub" },
-               { icon: <img src="/linkedin.png" className="w-5 h-5" />, href: "https://www.linkedin.com/in/jain-hemang/", label: "LinkedIn" }
+               { icon: <Mail className="w-4 h-4 md:w-5 md:h-5" />, href: "mailto:jain.hemang55@gmail.com", label: "Email" },
+               { icon: <img src="/github.png" className="w-4 h-4 md:w-5 md:h-5 filter invert" />, href: "https://github.com/hemangjain17", label: "GitHub" },
+               { icon: <img src="/linkedin.png" className="w-4 h-4 md:w-5 md:h-5" />, href: "https://www.linkedin.com/in/jain-hemang/", label: "LinkedIn" }
              ].map((social, i) => (
                <motion.a
                  key={i}
                  href={social.href}
                  target="_blank"
                  whileHover={{ y: -5, scale: 1.05 }}
-                 className="text-white/30 hover:text-white transition-all px-5 py-3 bg-white/5 rounded-xl border border-white/5 backdrop-blur-xl flex items-center gap-3 hover:border-primary/30"
+                 className="text-white/30 hover:text-white transition-all px-4 py-2 md:px-5 md:py-3 bg-white/5 rounded-xl border border-white/5 backdrop-blur-xl flex items-center gap-2 md:gap-3 hover:border-primary/30"
                >
                  {social.icon}
-                 <span className="text-sm font-medium">{social.label}</span>
+                 <span className="text-xs md:text-sm font-medium">{social.label}</span>
                </motion.a>
              ))}
           </div>

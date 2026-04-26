@@ -87,7 +87,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group"
+              className={`group ${i >= 3 ? 'hidden md:block' : ''}`}
             >
               {/* Project Image Card */}
               <div className="relative aspect-[16/10] rounded-[2rem] overflow-hidden bg-[#1a1a1a] border border-white/5 group-hover:border-primary/50 transition-all duration-500 mb-10">
@@ -99,19 +99,19 @@ export default function Projects() {
                 
                 {/* Award Badge */}
                 {project.award && (
-                  <div className="absolute top-6 left-6 px-4 py-2 bg-primary text-white text-[10px] font-bold uppercase tracking-widest rounded-full flex items-center gap-2 shadow-2xl z-20">
-                    <Trophy className="w-3 h-3" />
+                  <div className="absolute top-4 left-4 md:top-6 md:left-6 px-3 py-1.5 md:px-4 md:py-2 bg-primary text-white text-[8px] md:text-[10px] font-bold uppercase tracking-widest rounded-full flex items-center gap-1.5 md:gap-2 shadow-2xl z-20">
+                    <Trophy className="w-2.5 h-2.5 md:w-3 md:h-3" />
                     {project.award}
                   </div>
                 )}
 
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-6 z-10 backdrop-blur-sm">
-                  <a href={project.github} target="_blank" className="p-4 bg-white/10 hover:bg-primary rounded-full transition-all hover:scale-110 flex items-center justify-center">
-                    <img src="/github.png" className="w-6 h-6 filter invert" alt="Github" />
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-4 md:gap-6 z-10 backdrop-blur-sm">
+                  <a href={project.github} target="_blank" className="p-3 md:p-4 bg-white/10 hover:bg-primary rounded-full transition-all hover:scale-110 flex items-center justify-center">
+                    <img src="/github.png" className="w-5 h-5 md:w-6 md:h-6 filter invert" alt="Github" />
                   </a>
                   {project.youtube && (
-                    <a href={project.youtube} target="_blank" className="p-4 bg-white/10 hover:bg-red-600 rounded-full transition-all hover:scale-110 flex items-center justify-center">
-                      <Play className="w-6 h-6 text-white" />
+                    <a href={project.youtube} target="_blank" className="p-3 md:p-4 bg-white/10 hover:bg-red-600 rounded-full transition-all hover:scale-110 flex items-center justify-center">
+                      <Play className="w-5 h-5 md:w-6 md:h-6 text-white" />
                     </a>
                   )}
                 </div>

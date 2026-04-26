@@ -37,6 +37,39 @@ const expertise = [
   },
 ];
 
+function AboutBio() {
+  const [expanded, setExpanded] = React.useState(false);
+
+  return (
+    <div className="mb-20">
+      <h2 className="text-4xl md:text-6xl font-bold mb-8">About <span className="text-gradient">Me</span></h2>
+      <div className={`${expanded ? '' : 'max-h-[7.5rem] md:max-h-none'} overflow-hidden transition-all duration-500`}>
+        <p className="text-white/40 text-lg leading-relaxed">
+          Hi, I&apos;m Hemang Jain, and for me, engineering is as much about feeling and intuition as it is about logic. I live for that moment of clarity when complex chaos finally settles into an elegant, intelligent reality. My life is a process of relentless evolution; I&apos;m always updating my perspective and pushing my own boundaries to ensure I&apos;m never standing still.
+        </p>
+        <p className="text-white/40 text-lg leading-relaxed mt-5">
+          I thrive in dynamic environments where I can blend high-level problem-solving with a deep focus on user experience. I take a user-centric approach to every project, ensuring that the systems I build, whether they are autonomous pipelines or intricate web applications, are not only performant and scalable but also intuitive and human.
+        </p>
+        <p className="text-white/40 text-lg leading-relaxed mt-5">
+          To me, work should be so clean and undeniable that it speaks for itself, requiring no explanation.
+        </p>
+        <p className="text-white/50 text-lg leading-relaxed mt-8 italic">
+          Feel free to reach out to me for collaborations, freelance work, or just to chat about tech! I&apos;d love to connect.
+        </p>
+      </div>
+      {!expanded && (
+        <div className="md:hidden mt-1 bg-gradient-to-t from-[#000103] to-transparent h-8 -mt-8 relative z-10" />
+      )}
+      <button
+        onClick={() => setExpanded(!expanded)}
+        className="md:hidden text-primary font-bold mt-2 hover:underline focus:outline-none text-sm"
+      >
+        {expanded ? 'Read Less' : 'Read More'}
+      </button>
+    </div>
+  );
+}
+
 export default function About() {
   return (
     <section id="about" className="py-28 px-6 relative overflow-hidden">
@@ -46,21 +79,7 @@ export default function About() {
       
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="mb-20">
-          <h2 className="text-4xl md:text-6xl font-bold mb-8">About <span className="text-gradient">Me</span></h2>
-          <p className="text-white/40 text-lg leading-relaxed">
-            Hi, I&apos;m Hemang Jain, and for me, engineering is as much about feeling and intuition as it is about logic. I live for that moment of clarity when complex chaos finally settles into an elegant, intelligent reality. My life is a process of relentless evolution; I&apos;m always updating my perspective and pushing my own boundaries to ensure I&apos;m never standing still.
-          </p>
-          <p className="text-white/40 text-lg leading-relaxed mt-5">
-            I thrive in dynamic environments where I can blend high-level problem-solving with a deep focus on user experience. I take a user-centric approach to every project, ensuring that the systems I build, whether they are autonomous pipelines or intricate web applications, are not only performant and scalable but also intuitive and human.
-          </p>
-          <p className="text-white/40 text-lg leading-relaxed mt-5">
-            To me, work should be so clean and undeniable that it speaks for itself, requiring no explanation.
-          </p>
-          <p className="text-white/50 text-lg leading-relaxed mt-8 italic">
-            Feel free to reach out to me for collaborations, freelance work, or just to chat about tech! I&apos;d love to connect.
-          </p>
-        </div>
+        <AboutBio />
 
         {/* Special Skills - Animated Marquee */}
         <motion.div
@@ -75,8 +94,8 @@ export default function About() {
           </div>
           
           {/* Fade edges */}
-          <div className="absolute left-0 top-8 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-8 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-8 bottom-0 w-8 md:w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-8 bottom-0 w-8 md:w-20 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
           
           <div className="flex gap-3 animate-marquee">
             {[...specialSkills, ...specialSkills].map((skill, i) => (
@@ -91,7 +110,7 @@ export default function About() {
         </motion.div>
 
         {/* Expertise Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="hidden md:grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {expertise.map((item, i) => (
             <motion.div
               key={i}
@@ -110,7 +129,6 @@ export default function About() {
                   <div className="p-3 rounded-2xl bg-white/5 border border-white/10 text-primary group-hover:bg-primary/10 group-hover:border-primary/30 transition-all duration-300">
                     {item.icon}
                   </div>
-                  <ArrowRight className="w-4 h-4 text-white/10 group-hover:text-primary/60 group-hover:translate-x-1 transition-all duration-300" />
                 </div>
                 <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors duration-300">{item.title}</h3>
                 <p className="text-sm text-white/40 leading-relaxed group-hover:text-white/60 transition-colors duration-300">{item.desc}</p>
