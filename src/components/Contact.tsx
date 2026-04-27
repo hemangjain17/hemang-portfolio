@@ -99,7 +99,7 @@ export default function Contact() {
             >
               Reach out
             </motion.a>
-            <span className="text-white/25 text-xs md:text-sm font-medium tracking-wide">jain.hemang55@gmail.com</span>
+            <span className="text-white/70 text-xs md:text-sm font-medium tracking-wide">jain.hemang55@gmail.com</span>
           </div>
 
           <div className="pt-4 flex flex-wrap items-center justify-center gap-3 sm:gap-6">
@@ -113,7 +113,7 @@ export default function Contact() {
                  href={social.href}
                  target="_blank"
                  whileHover={{ y: -5, scale: 1.05 }}
-                 className="text-white/30 hover:text-white transition-all px-4 py-2 md:px-5 md:py-3 bg-white/5 rounded-xl border border-white/5 backdrop-blur-xl flex items-center gap-2 md:gap-3 hover:border-primary/30"
+                 className="text-white/75 hover:text-white transition-all px-4 py-2 md:px-5 md:py-3 bg-white/5 rounded-xl border border-white/5 backdrop-blur-xl flex items-center gap-2 md:gap-3 hover:border-primary/30"
                >
                  {social.icon}
                  <span className="text-xs md:text-sm font-medium">{social.label}</span>
