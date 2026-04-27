@@ -11,8 +11,8 @@ const products = [
     description: "An AI-driven dashboard for real-time energy consumption tracking and optimization. Helps households reduce their carbon footprint by up to 30%.",
     features: ["Smart Grid Integration", "Predictive Analytics", "Mobile App Control"],
     icon: <Zap className="w-6 h-6" />,
-    color: "from-emerald-500/20 to-emerald-900/20",
-    borderColor: "group-hover:border-emerald-500/50"
+    color: "from-white/10 to-transparent",
+    borderColor: "group-hover:border-white/50"
   },
   {
     title: "SecureVault",
@@ -20,8 +20,8 @@ const products = [
     description: "Enterprise-grade security platform using post-quantum cryptography to protect sensitive financial data. Zero-knowledge architecture for total privacy.",
     features: ["Quantum-Resistant", "Biometric Auth", "Auto-Compliance"],
     icon: <Shield className="w-6 h-6" />,
-    color: "from-blue-500/20 to-blue-900/20",
-    borderColor: "group-hover:border-blue-500/50"
+    color: "from-white/10 to-transparent",
+    borderColor: "group-hover:border-white/50"
   },
   {
     title: "MarketMind",
@@ -29,8 +29,8 @@ const products = [
     description: "High-frequency trading interface with built-in sentiment analysis and automated risk management for retail traders and small hedge funds.",
     features: ["Low Latency Execution", "Sentiment Engine", "Strategy Builder"],
     icon: <BarChart3 className="w-6 h-6" />,
-    color: "from-purple-500/20 to-purple-900/20",
-    borderColor: "group-hover:border-purple-500/50"
+    color: "from-white/10 to-transparent",
+    borderColor: "group-hover:border-white/50"
   }
 ];
 
@@ -99,7 +99,7 @@ export default function Product() {
               <h3 className="text-3xl font-bold mb-4">Want a custom solution?</h3>
               <p className="text-white/50">I offer specialized consulting for AI infrastructure, high-performance web apps, and enterprise security architectures.</p>
             </div>
-            <a href="#contact" className="px-8 py-4 bg-primary text-white font-bold rounded-2xl hover:scale-105 transition-transform shadow-xl shadow-primary/20 whitespace-nowrap">
+            <a href="/#contact" className="px-8 py-4 bg-primary text-black font-bold rounded-2xl hover:scale-105 transition-transform shadow-xl shadow-primary/20 whitespace-nowrap">
               Start a Conversation
             </a>
           </div>

@@ -4,69 +4,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Trophy, Code, Play } from "lucide-react";
 
-const projects = [
-  {
-    title: "TruthLens",
-    award: "Won Google GenAI Hackathon",
-    category: "NLP • Knowledge Graphs",
-    description: "A relentless multimodal fact-verification system designed to combat misinformation by cross-referencing claims against structured Knowledge Graphs. Utilizes BERT-NLI to achieve 95%+ precision in under 15 seconds, analyzing social networks and fact-checking APIs.",
-    tags: ["Knowledge Graphs", "BERT-NLI", "Multimodal RAG", "NLP", "React.js", "Flask", "DigitalOcean"],
-    link: "https://github.com/vansh2101/news-verfication",
-    github: "https://github.com/vansh2101/news-verfication",
-    youtube: "https://www.youtube.com/watch?v=_xJIaqa86m8",
-    image: "/projects/truthlens.png"
-  },
-  {
-    title: "Real-time AD Bidding",
-    award: "Won Adobe Devcraft",
-    category: "Machine Learning • Algorithms",
-    description: "Designed a high-speed CTR and Bid Price prediction engine utilizing LightGBM, optimized for extreme performance with a sub-2ms execution time. Engineered region-city weighted features and device mapping to reduce memory usage by over 80% within a strict 512KB space constraint.",
-    tags: ["Machine Learning", "LightGBM", "Parallel Execution", "Performance Tuning", "Feature Engineering"],
-    link: "https://github.com/vishrutgrover/bidding-devcraft",
-    github: "https://github.com/vishrutgrover/bidding-devcraft",
-    image: "/projects/bidding.png"
-  },
-  {
-    title: "StockXpert - BSE Insights",
-    award: "Won brAInwave",
-    category: "NLP • RAG",
-    description: "A RAG-driven financial intelligence platform that executes real-time sentiment extraction from BSE news and filings. Features an autonomous \"Trading Buddy\" with asynchronous scraping for live updates and real-time WhatsApp alerts delivered via Twilio bots.",
-    tags: ["Temporal RAG", "LlamaIndex", "Sentiment Analysis", "Selenium", "Twilio API", "Vector Databases"],
-    link: "https://github.com/soodaryan/StockXpert",
-    github: "https://github.com/soodaryan/StockXpert",
-    youtube: "https://www.youtube.com/watch?v=l5WIgulmZfo",
-    image: "/projects/stockxpert.png"
-  },
-  {
-    title: "Meta-RL GTM Strategy Optimizer",
-    award: "HF Scalar Hack Finalist",
-    category: "Reinforcement Learning",
-    description: "A reinforcement learning–driven GTM simulation environment where agents learn to dynamically optimize budget allocation, targeting, messaging, and pricing under uncertainty—balancing short-term revenue with long-term brand growth through adaptive, self-evolving strategies.",
-    tags: ["Reinforcement Learning", "OpenEnv", "Hugging Face Spaces", "Multi-Agent"],
-    link: "https://github.com/vishrutgrover/meta-rl",
-    github: "https://github.com/vishrutgrover/meta-rl",
-    image: "/projects/sarva.png"
-  },
-  {
-    title: "SARVA - SAR Vision Agent",
-    category: "Computer Vision • Research",
-    description: "Engineered a state-of-the-art architecture for satellite imagery, specifically focusing on the despeckling (Dual-Attention Residual Auto-Encoder) and colorization (Modified PiggyBack GAN) of Synthetic Aperture Radar (SAR) data. Achieved a SOTA PSNR of 27.68 and developed an agentic framework demonstrating humanly impossible task solving with 85.64% segmentation accuracy.",
-    tags: ["Dual-Attention Auto-Encoders", "PiggyBack GANs", "PyTorch", "CV", "AI Agents"],
-    link: "https://github.com/soodaryan/SARVA",
-    github: "https://github.com/soodaryan/SARVA",
-    image: "/projects/sarva.png"
-  },
-  {
-    title: "Watcher AI",
-    category: "AI-Powered CCTV Intelligence",
-    description: "Developed an advanced AI-powered CCTV intelligence platform designed to convert raw surveillance footage into actionable insights through real-time scene understanding. Features unified Person of Interest (POI) tracking across disparate feeds (CCTV, drones, body cams) and a multimodal search engine for natural language queries. Integrates crowd intelligence for real-time density estimation and emergency routing.",
-    tags: ["VLMs", "Multimodal RAG", "LangGraph", "FastFlowNet", "DeepSort"],
-    link: "https://github.com/DeveloperAkansh26/AWS-ImpactX-IITB-OpenSeeWe",
-    github: "https://github.com/DeveloperAkansh26/AWS-ImpactX-IITB-OpenSeeWe",
-    youtube: "https://www.youtube.com/watch?v=xfSzAvPHYDs",
-    image: "/projects/watcher.png"
-  }
-];
+import Link from 'next/link';
+import { allProjects } from '../lib/projects';
+
+const projects = allProjects.slice(0, 4);
 
 export default function Projects() {
   const [expandedIndex, setExpandedIndex] = React.useState<number | null>(null);
@@ -99,7 +40,7 @@ export default function Projects() {
                 
                 {/* Award Badge */}
                 {project.award && (
-                  <div className="absolute top-4 left-4 md:top-6 md:left-6 px-3 py-1.5 md:px-4 md:py-2 bg-primary text-white text-[8px] md:text-[10px] font-bold uppercase tracking-widest rounded-full flex items-center gap-1.5 md:gap-2 shadow-2xl z-20">
+                  <div className="absolute top-4 left-4 md:top-6 md:left-6 px-3 py-1.5 md:px-4 md:py-2 bg-primary text-black text-[8px] md:text-[10px] font-bold uppercase tracking-widest rounded-full flex items-center gap-1.5 md:gap-2 shadow-2xl z-20">
                     <Trophy className="w-2.5 h-2.5 md:w-3 md:h-3" />
                     {project.award}
                   </div>
@@ -150,6 +91,12 @@ export default function Projects() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-16 hidden justify-center relative z-50">
+          <a href="/projects" className="px-8 py-4 border border-white/20 rounded-2xl hover:bg-white hover:text-black transition-all font-bold tracking-wide">
+            View All Projects
+          </a>
         </div>
       </div>
     </section>

@@ -55,10 +55,10 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center sm:items-center w-full">
             <motion.a
-              whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(99,102,241,0.4)" }}
+              whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(255,255,255,0.4)" }}
               whileTap={{ scale: 0.98 }}
-              href="#projects"
-              className="group relative px-6 py-3 md:px-10 md:py-5 rounded-xl md:rounded-2xl bg-primary text-white font-bold flex items-center justify-center gap-2 md:gap-3 transition-all overflow-hidden w-full sm:w-auto text-sm md:text-base"
+              href="/#projects"
+              className="group relative px-6 py-3 md:px-10 md:py-5 rounded-xl md:rounded-2xl bg-primary text-black font-bold flex items-center justify-center gap-2 md:gap-3 transition-all overflow-hidden w-full sm:w-auto text-sm md:text-base"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
               Explore Projects <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />

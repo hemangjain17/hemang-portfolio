@@ -6,13 +6,13 @@ import { Menu, X, FileText } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Experience", href: "#experience" },
-  { name: "Projects", href: "#projects" },
-  { name: "Skills", href: "#skills" },
-  { name: "Achievements", href: "#achievements" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/#home" },
+  { name: "About", href: "/#about" },
+  { name: "Experience", href: "/#experience" },
+  { name: "Projects", href: "/#projects" },
+  { name: "Skills", href: "/#skills" },
+  { name: "Achievements", href: "/#achievements" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -44,7 +44,7 @@ export default function Navbar() {
       >
         {/* Left Side: Favicon/Logo */}
         <div className="flex-shrink-0 z-10">
-          <a href="#home" className="flex items-center gap-2">
+          <a href="/#home" className="flex items-center gap-2">
             <img src="/initials.jpeg" alt="Logo" className="w-10 h-10 md:w-12 md:h-12 rounded-xl object-cover border border-white/10 shadow-2xl" />
           </a>
         </div>
@@ -71,7 +71,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="group relative hidden sm:flex items-center gap-2 px-4 md:px-7 py-2 md:py-3 rounded-full bg-primary text-white text-sm md:text-base font-bold transition-all shadow-[0_0_15px_rgba(99,102,241,0.3)] overflow-hidden"
+            className="group relative hidden sm:flex items-center gap-2 px-4 md:px-7 py-2 md:py-3 rounded-full bg-primary text-black text-sm md:text-base font-bold transition-all shadow-[0_0_15px_rgba(255,255,255,0.3)] overflow-hidden"
           >
             <FileText className="w-4 h-4 md:w-5 md:h-5" />
             <span>Resume</span>

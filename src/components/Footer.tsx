@@ -16,10 +16,10 @@ export default function Footer() {
           </div>
           
           <div className="flex items-center gap-8 text-sm text-white/40">
-            <a href="#home" className="hover:text-primary transition-colors">Home</a>
-            <a href="#about" className="hover:text-primary transition-colors">About</a>
-            <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
-            <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+            <a href="/#home" className="hover:text-primary transition-colors">Home</a>
+            <a href="/#about" className="hover:text-primary transition-colors">About</a>
+            <a href="/#projects" className="hover:text-primary transition-colors">Projects</a>
+            <a href="/#contact" className="hover:text-primary transition-colors">Contact</a>
           </div>
 
           <div className="text-sm text-white/40 flex items-center gap-2">

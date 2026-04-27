@@ -15,25 +15,25 @@ const expertise = [
     title: "AI Engineering", 
     desc: "Architecting LLM agents, RAG pipelines, and autonomous systems that transform raw data into actionable intelligence.", 
     icon: <Brain className="w-7 h-7" />,
-    gradient: "from-violet-500/20 to-indigo-500/20"
+    gradient: "from-white/10 to-transparent"
   },
   { 
     title: "Computer Vision", 
     desc: "Building real-time detection systems and SOTA SAR image analysis with AWS Rekognition and DeepSort.", 
     icon: <Cpu className="w-7 h-7" />,
-    gradient: "from-cyan-500/20 to-blue-500/20"
+    gradient: "from-white/10 to-transparent"
   },
   { 
     title: "Scalable Systems", 
     desc: "Designing production-grade pipelines that reduce operational costs by up to 1000x without sacrificing performance.", 
     icon: <Workflow className="w-7 h-7" />,
-    gradient: "from-emerald-500/20 to-teal-500/20"
+    gradient: "from-white/10 to-transparent"
   },
   { 
     title: "Data Architecture", 
     desc: "Engineering secure, high-speed knowledge bases and retrieval systems for enterprise-scale applications.", 
     icon: <Database className="w-7 h-7" />,
-    gradient: "from-amber-500/20 to-orange-500/20"
+    gradient: "from-white/10 to-transparent"
   },
 ];
 
@@ -75,7 +75,7 @@ export default function About() {
     <section id="about" className="py-28 px-6 relative overflow-hidden">
       {/* Ambient background effects */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px] -z-10" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-500/5 rounded-full blur-[120px] -z-10" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/5 rounded-full blur-[120px] -z-10" />
       
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
